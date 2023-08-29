@@ -1,0 +1,22 @@
+bubble sort:PROCEDURE swap(var x:INTEGER,var y:INTEGER)
+VAR
+  aux:INTEGER
+BEGIN
+aux:= x;
+x:=y;
+y:=aux
+END
+
+PROCEDURE bubble-sort(VAR tab : ARRAY_OF INTEGER[30])
+VAR
+i,j:INTEGER
+BEGIN
+
+FOR i FROM 0 TO tab.length - 1 STEP 1  DO
+FOR j FROM 0 TO tab.length - i - 1 STEP step  DO
+  if(tab[j]>tab[j+1]) then
+swap(tab[j],tab[j+1])
+end if
+END_FOR
+END_FOR
+END
